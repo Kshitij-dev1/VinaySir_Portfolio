@@ -85,16 +85,17 @@ h1 {
 }
 
 p {
-    font-size: 0.9rem; /* Adjusted font size for smaller screens */
+    font-size: 110%; /* Adjusted font size for smaller screens */
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.btn-warning {
+.btn-outline-danger {
     color: black;
     font-weight: bold;
     padding: 10px 20px; /* Adjusted button padding */
     background-color: #bf0607;
+    margin-top: 4%;
 }
 .img-vp{
     border-radius: 0 0 200px 200px;
