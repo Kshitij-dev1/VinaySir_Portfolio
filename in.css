@@ -1,0 +1,462 @@
+/* General styles */
+body {
+    padding-top: 70px; /* Adjust based on navbar height */
+    font-family: sans-serif; /* Example font */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #f8f9fa !important; /* Light background */
+}
+
+.logo{
+    height: 60px;
+}
+.logo img{
+    margin-right: 10px; /* Space between logo and text (if any) */
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+ul.navbar-nav.nav-iit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 15%;
+}
+.navbar-nav .nav-link {
+    color: #333; /* Darker text color for links */
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #007bff; /* Primary color for active link */
+    border-bottom: 2px solid #007bff;
+}
+
+/* Social icon styles */
+.d-flex.align-items-center a.nav-link {
+    margin-right: 10px;
+    font-size: 1.2rem; /* Adjust icon size */
+    color: #555; /* Dark grey color for icons */
+}
+
+.d-flex.align-items-center a.nav-link:last-child {
+    margin-right: 0;
+}
+.banner {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* padding: 50px 0; Adjusted padding for smaller screens */
+    position: relative;
+    overflow: hidden; /* To contain the pseudo-element */
+}
+
+.bg-image::before {
+    content: "";
+    background-image: url('/assets/Untitled\ design\ \(2\).png'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px); /* Slightly less blur on smaller screens */
+    opacity: 0.6; /* Adjust opacity of the background */
+    z-index: -1;
+}
+
+.text-column {
+    padding-right: 0; /* Removed right padding for better mobile layout */
+    margin-bottom: 30px;
+    text-align: left; /* Align text left on mobile */
+}
+
+h1 {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #e91705; /* Yellow color for "AGENCY" */
+}
+
+p {
+    font-size: 0.9rem; /* Adjusted font size for smaller screens */
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-warning {
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px; /* Adjusted button padding */
+    background-color: #bf0607;
+}
+.img-vp{
+    border-radius: 0 0 200px 200px;
+    border-bottom: 7px solid #9d0b0b;
+}
+
+.image-column {
+    text-align: center; /* Center image on mobile */
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.about-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.container-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.about-col {
+    flex: 1 1 300px; /* Allow columns to grow, shrink, and take a base width */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+} */
+
+.separator {
+    width: 50px;
+    height: 2px;
+    background-color: #e40046; /* Pink accent color */
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+} */
+
+.button {
+    background-color: #fff;
+    color: #e40046;
+    border: 1px solid #e40046;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e40046;
+    color: #fff;
+}
+
+/* Personal Info Column Styles */
+.personal-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-info li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.personal-info li span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.personal-info a {
+    color: #e40046;
+    text-decoration: none;
+}
+
+.personal-info a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.4em;
+    color: #e40046;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #333;
+}
+
+/* My Expertise Column Styles */
+.expertise-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.expertise-item i.icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e40046;
+    border-radius: 5px;
+    margin-right: 15px;
+    /* Add your icon or image here, or use a font icon */
+    /* Example using background color for placeholder */
+    background-color: #ffe0e6;
+}
+
+.expertise-item h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.expertise-item p {
+    color: #777;
+    font-size: 0.95em;
+}
+
+/* clients */
+#clients{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f656;
+    padding: 10px 0px;
+    margin: 20px auto;
+    border-top: 1px solid #f3f3f3;
+    border-bottom:  1px solid #f3f3f3;
+}
+.clint-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.clint-heading h3{
+    font-size: 28.8px;
+    color: #202020;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 0px 5px;
+}
+.clint-heading p{
+    color: #696969;
+    font-size: 12.8px;
+}
+.client-box-container{
+    grid-gap: 20px;
+    width: 90%;
+    margin-top: 40px;
+}
+.clint-box{
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border: 1px solid #f1f1f1;
+    border-radius: 0px 30px 0px 30px;
+}
+.clint-profile{
+    display: block;
+    align-items: center;
+}
+.clint-profile img {
+        width: 100%;
+        height: 189px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 7%;
+    }
+.profile-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.profile-text strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #da250f;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.profile-text span{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    color: #949494;
+    font-weight: 600;
+    font-size: 12.8px;
+}
+.rating{
+    display: flex;
+    margin: 6px 0px;
+}
+.rating i{
+    color: var(--main-color);
+}
+.clint-box p{
+    color: #7c7c7c;
+    font-size: 14.4px;
+}
+
+
+.funfact-item {
+	gap: 15px;
+
+}
+.funfact-item .number {
+	font-size: 64px;
+	line-height: 1;
+	font-weight: var(--tj-fw-bold);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    color: #e81406;
+    text-shadow: rgba(216, 125, 125, 0.598) 1px 0 10px;
+    
+}
+.funfact-item .text{
+    color: #202020;
+    font-weight: 700;
+    text-shadow: rgb(122, 112, 112) 1px 0 10px;
+}
+.funfact-area {
+	margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+@media (max-width:579px){
+    ul.navbar-nav.nav-iit {
+        display: flex;
+        align-items: normal; 
+        justify-content: center;
+        position: relative;
+         left: 1%;
+    }
+    .banner {
+        padding-top: 50px;
+    }
+    .bg-image::before {
+        filter: blur(3px);
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .btn-warning {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width:991px){
+    ul.navbar-nav.nav-iit {
+        display: flex;
+        align-items: normal; 
+        justify-content: center;
+        position: relative;
+         left: 1%;
+}
+.banner {
+    padding-top: 10px ; /* Revert to larger padding on desktop */
+}
+.bg-image::before {
+    filter: blur(5px); /* Revert to larger blur on desktop */
+}
+.text-column {
+    padding-right: 30px; /* Add right padding on desktop */
+    text-align: left;
+}
+h1 {
+    font-size: 2.5rem; /* Revert to larger font size on desktop */
+}
+p {
+    font-size: 1rem; /* Revert to larger font size on desktop */
+}
+
+.funfact-area {
+    margin-top: 60px;
+}
+.funfact-item .number {
+    font-size: 55px;
+}
+.funfact-item {
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.funfact-item .number {
+    font-size: 55px;
+}
+
+}
+@media (max-width: 768px) {
+    .container-about {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center;
+    }
+
+    .about-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .div-ct{
+        flex-direction: column-reverse;
+    }
+    .img-vp{
+        width: 51%;
+        position: relative;
+        left: -21%;
+    }
+
+    .funfact-area {
+		margin-top: 60px;
+	}
+	.funfact-item {
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	.funfact-item .number {
+		font-size: 55px;
+	}
+	.funfact-item .text {
+		text-align: center;
+		/* margin-top: -15px; */
+	}
+}

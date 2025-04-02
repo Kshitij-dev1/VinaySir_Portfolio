@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: poppins; */
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+
+}
+/* header */
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+
+}
+.head-fix{
+    position: fixed;
+    box-shadow: 2px 2px 40px #04030373;
+    animation: anim 0.9s;
+}
+@keyframes anim{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.head-fix .hd-top-bnr{
+    display: none;
+}
+.head-fix .navigation{
+    padding: 12px 0px;
+}
+.hd-top-bnr{
+    border-bottom: 1px solid #f5f5f5;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hd-top-bnr span{
+    color: #474747;
+    font-size: 12.8px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+/* Navigation */
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0px;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.logo{
+    height: 60px;
+}
+.logo img{
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.menu{
+    display: flex;
+}
+.menu-btn,
+.menu-icon{
+    display: none;
+}
+.menu li a{
+    padding: 3px 10px;
+    margin: 0px 15px;
+    color: #3b3b3b;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 14.4px;
+    transition: all ease 0.4s;
+}
+.menu li a:hover,
+.menu li a.active{
+    color: var(--main-color);
+}
+.right-nav{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+
+}
+.right-nav a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--main-light-color);
+    position: relative;
+}
+.right-nav a i{
+    color: #4b4b4b;
+}
+.right-nav a span{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: var(--main-color);
+    font-weight: 500;
+    font-size: 9.6px;
+}
