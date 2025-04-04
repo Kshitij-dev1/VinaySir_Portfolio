@@ -373,7 +373,7 @@ p {
 }
 
 .gallery-title {
-    color: coral;
+    color: #e40046;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -403,7 +403,7 @@ p {
 }
 
 .grid-item-wrapper:hover {
-    border-color: coral;
+    border-color: #74090d;
 }
         /* Apply focus styles by default for touch, and hover for non-touch */
         .grid-item-wrapper:hover img,
@@ -415,7 +415,7 @@ p {
         .grid-item-wrapper:hover,
         .grid-item-wrapper:focus,
         .grid-item-wrapper.is-touch {
-            border-color: coral;
+            border-color: #74090d;
         }
 
 .doggo-image {
@@ -499,6 +499,14 @@ p {
 }
 .funfact-item .number {
     font-size: 55px;
+}
+.doggo-image { 
+    filter: grayscale(0);
+
+}
+.grid-item-wrapper:hover{
+    transform: scale(1.1); 
+
 }
 
 }
