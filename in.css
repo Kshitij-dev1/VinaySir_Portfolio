@@ -405,6 +405,18 @@ p {
 .grid-item-wrapper:hover {
     border-color: coral;
 }
+        /* Apply focus styles by default for touch, and hover for non-touch */
+        .grid-item-wrapper:hover img,
+        .grid-item-wrapper:focus img,
+        .grid-item-wrapper.is-touch img { /* added .is-touch here as well to make it more robust */
+            filter: grayscale(0);
+        }
+
+        .grid-item-wrapper:hover,
+        .grid-item-wrapper:focus,
+        .grid-item-wrapper.is-touch {
+            border-color: coral;
+        }
 
 .doggo-image {
     width: 100%;
