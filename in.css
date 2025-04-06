@@ -437,48 +437,26 @@ p {
 }
 
 
-@media (max-width:579px){
-    ul.navbar-nav.nav-iit {
-        display: flex;
-        align-items: normal; 
-        justify-content: center;
-        position: relative;
-         left: 1%;
-    }
-    .banner {
-        padding-top: 50px;
-    }
-    .bg-image::before {
-        filter: blur(3px);
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    p {
-        font-size: 0.9rem;
-    }
-    .btn-warning {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-}
 @media (max-width:991px){
     ul.navbar-nav.nav-iit {
         display: flex;
         align-items: normal; 
         justify-content: center;
         position: relative;
-         left: 1%;
-}
-.banner {
-    padding-top: 10px ; /* Revert to larger padding on desktop */
+        left: 1%;
+    }
+    .banner {
+        padding-top: 10px ; /* Revert to larger padding on desktop */
 }
 .bg-image::before {
     filter: blur(5px); /* Revert to larger blur on desktop */
 }
 .text-column {
-    padding-right: 30px; /* Add right padding on desktop */
+    padding-right: 30px;
+    margin-top: 0%;
+    top: 52px;
     text-align: left;
+    position: relative;
 }
 h1 {
     font-size: 2.5rem; /* Revert to larger font size on desktop */
@@ -502,11 +480,11 @@ p {
 }
 .doggo-image { 
     filter: grayscale(0);
-
+    
 }
 .grid-item-wrapper:hover{
     transform: scale(1.1); 
-
+    
 }
 
 }
@@ -528,19 +506,64 @@ p {
         position: relative;
         left: -21%;
     }
-
+    
     .funfact-area {
-		margin-top: 60px;
+        margin-top: 10%;
 	}
 	.funfact-item {
-		justify-content: center;
+        justify-content: center;
 		margin-bottom: 30px;
 	}
 	.funfact-item .number {
-		font-size: 55px;
+        font-size: 55px;
 	}
 	.funfact-item .text {
-		text-align: center;
+        text-align: center;
 		/* margin-top: -15px; */
 	}
+    .text-column {
+        padding-right: 30px;
+        margin-top: 0%;
+        top: 24px;
+        text-align: left;
+        position: relative;
+    }
+}
+@media (max-width:575px){
+    ul.navbar-nav.nav-iit {
+        display: flex;
+        align-items: normal; 
+        justify-content: center;
+        position: relative;
+         left: 1%;
+    }
+    .banner {
+        /* padding-top: 50px; */
+        padding: 2%;
+    }
+    .image-column img {
+        /* align-self: center; */
+        left: auto;
+        /* height: 22%; */
+        width: 60%;
+    }
+    .bg-image::before {
+        filter: blur(3px);
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .btn-outline-danger{
+         /* padding: 10px 20px; */
+         font-size: 0.9rem;
+        width: 50%;
+    }
+    .text-column {
+        top: 24px;
+        text-align: center;
+        position: relative;
+    }
 }
