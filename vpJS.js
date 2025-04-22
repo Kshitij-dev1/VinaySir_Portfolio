@@ -34,3 +34,77 @@ var swiper = new Swiper(".mySwiperTest", {
 //   gallry crousel
 
 
+
+
+// reveal
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // loding
+
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    loader.classList.add('fade-out');
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 1500);
+  });
+
+
+
+  // 
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+  
+    window.addEventListener('scroll', () => {
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= sectionTop - sectionHeight / 3 && window.scrollY < sectionTop + sectionHeight - sectionHeight / 3) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+
+  
+  const hamburger = document.querySelector('.navbar-toggler');
+const navLinks = document.querySelectorAll('.nav-link');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+
+// Function to close the menu
+function closeMenu() {
+    navbarCollapse.classList.remove('show');
+}
+
+// Close menu when link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+// Close menu when scrolling
+window.addEventListener('scroll', closeMenu);
+
+

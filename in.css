@@ -1,11 +1,106 @@
 /* General styles */
+html{
+    scroll-behavior: smooth;
+}
 body {
+    margin: 0;
     padding-top: 70px; /* Adjust based on navbar height */
     font-family: sans-serif; /* Example font */
 }
 a{
     text-decoration: none;
 }
+
+/* LOADING SCREEN */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: rgb(150, 8, 8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw; /* Responsive font size */
+    z-index: 9999;
+    transition: opacity 1.5s ease;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Loading Text Animation */
+  .loading-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-text .dot {
+    animation: blink 1.4s infinite;
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 5px;
+  }
+  
+  .loading-text .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .loading-text .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Blink Animation */
+  @keyframes blink {
+    0%   { opacity: 0.2; }
+    20%  { opacity: 1; }
+    100% { opacity: 0.2; }
+  }
+  
+  /* OPTIONAL: Prevent content from showing until loader hides */
+  #main-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  #main-content.show {
+    opacity: 1;
+  }
+  
+  /* MEDIA QUERIES FOR EXTREME SIZES */
+  @media (max-width: 480px) {
+    #loader {
+      font-size: 9vw;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    #loader {
+      font-size: 5rem;
+    }
+  }
+  
+  
+  
+
+/* reveal */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease-out;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 
 /* Navbar styles */
 .navbar {
@@ -28,15 +123,52 @@ ul.navbar-nav.nav-iit {
     position: relative;
     left: 15%;
 }
-.navbar-nav .nav-link {
-    color: #333; /* Darker text color for links */
-    margin-right: 15px;
+/* Navbar Links */
+.nav-link {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: red;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  
+  /* Underline Effect */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition:  0.3s ease;
+  }
+  
+  /* On Hover or Active */
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: white;
+  }
+/* Smooth transition for navbar collapse */
+.navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
 }
 
-.navbar-nav .nav-link.active {
-    color: #007bff; /* Primary color for active link */
-    border-bottom: 2px solid #007bff;
+/* When menu is open */
+.navbar-collapse.show {
+    max-height: 500px; /* Adjust to fit your content */
 }
+
+
+  
 
 /* Social icon styles */
 .d-flex.align-items-center a.nav-link {
@@ -79,7 +211,7 @@ ul.navbar-nav.nav-iit {
 }
 
 h1 {
-    font-size: 2rem; /* Adjusted font size for smaller screens */
+    font-size: 3rem; /* Adjusted font size for smaller screens */
     margin-bottom: 15px;
 }
 
@@ -88,7 +220,7 @@ h1 {
 }
 
 p {
-    font-size: 110%; /* Adjusted font size for smaller screens */
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
     line-height: 1.5;
     margin-bottom: 20px;
     color: black;
@@ -603,7 +735,12 @@ h1 {
     font-size: 2.5rem; /* Revert to larger font size on desktop */
 }
 p {
-    font-size: 1rem; /* Revert to larger font size on desktop */
+    font-size: 100%; /* Revert to larger font size on desktop */
+}
+
+.grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
 }
 
 .funfact-area {
@@ -628,12 +765,40 @@ p {
     
 }
 
+
+.btn-outline-danger {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+
+.contact_wrapper {
+    padding: 20px 10px;
+}
+
+.footer_wrapper .footer_logo img {
+    width: 25%;
+}
+
+.main-btn {
+    font-size: 12px;
+    padding: 8px 20px;
+}
 }
 @media (max-width: 768px) {
     .container-about {
         flex-direction: column; /* Stack columns on smaller screens */
         align-items: center;
     }
+    .btn-outline-danger{
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    
+       width: 50%;
+   }
+   .footer_wrapper .footer_logo img {
+    width: 20%;
+}
 
     .about-col {
         width: 100%;
