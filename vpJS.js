@@ -29,8 +29,7 @@ var swiper = new Swiper(".mySwiperTest", {
       },
     },
   });
-
-
+  
 //   gallry crousel
 
 
